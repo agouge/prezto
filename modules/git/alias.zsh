@@ -56,6 +56,9 @@ alias gcR='git reset "HEAD^"'
 alias gcs='git show'
 alias gcl='git-commit-lost'
 
+# Committer statistics
+alias gst='git shortlog -s -n'
+
 # Conflict (C)
 alias gCl='git status | sed -n "s/^.*both [a-z]*ed: *//p"'
 alias gCa='git add $(gCl)'
@@ -81,8 +84,8 @@ alias gfm='git pull'
 alias gfr='git pull --rebase'
 
 # Grep (g)
-alias gg='git grep'
-alias ggi='git grep --ignore-case'
+alias gg='git grep -n --break --heading'
+alias ggi='git grep -n --break --heading --ignore-case'
 alias ggl='git grep --files-with-matches'
 alias ggL='git grep --files-without-matches'
 alias ggv='git grep --invert-match'

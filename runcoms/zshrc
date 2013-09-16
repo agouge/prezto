@@ -11,4 +11,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+source /usr/share/doc/pkgfile/command-not-found.zsh
+export EDITOR="/usr/bin/vim"
+source $HOME/.aliases
+eval $(/usr/bin/keychain --eval --agents ssh -Q --quiet ~/.ssh/id_rsa)
 
+# Disable hostname completion
+zstyle ':completion:*' hosts off
+
+#autoload -U select-word-style
+#select-word-style bash
